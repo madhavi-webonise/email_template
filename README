@@ -1,0 +1,40 @@
+--------------------------------
+CakePHP Email Template Create And Management Plugin
+--------------------------------
+https://github.com/madhavi-webonise/email_template
+
+Background:
+--------------------------------
+This is a very simple dynamic email template management plugin for CakePHP
+
+Overall functionality is inspired by email content management in code or in cakephp view. This plugin is will help to change email content in admin
+
+The Plugin is an attempt to provide a basic, simple to use method to add new email templates as per requirement dy developer and change the email content by admin or super user for the appication as they want. while integrating nicely into CakePHP.
+
+Why use this plugin?
+When I was working on my one project there is continues requirement to chaneg email content. for that every time I need to do change in code or in my email view. To make this process easy I wrote this plugin through which we can provide email content editing facility to admin using some constants which we can replace in code with there dynamic values.
+
+While you can create email templates using this plugin and integrate it in code. and give facility to site admin to edit or view the email templates so they can edit content as per requirement.
+
+Installation:
+--------------------------------
+* Copy the files in this directory into <yourapp>/plugins/email_template.
+* You have to ad migration plugin to create email_template table
+* Run the following command in the cake console to create the tables:
+  on Cakephp 1.3
+		@cake migration -plugin email_template
+			
+If you Installed the Email Template Plugin in your global plugins directory instead of the app specific one, you will have to modify the -path parameter to point to the correct directory.
+		
+Usage:
+--------------------------------
+1) Create the email templates using <yourappurl>/email_template/email_templates/add
+2) See the list of all email template <yourappurl>/email_template/email_templates 
+3) You can edit and view existing email templates from list.
+4) view the constant in colorbox by clicking "Email Constants" link on add and edit list.
+
+Notes:
+    
+        
+
+Current releases: hhttps://github.com/madhavi-webonise/email_template/downloads

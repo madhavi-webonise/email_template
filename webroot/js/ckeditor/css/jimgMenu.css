@@ -1,0 +1,73 @@
+
+.jimgMenu {
+	position: relative;
+	width: 620px;
+	height: 244px;
+	overflow: hidden;
+	/*margin: 25px 0px 0px;*/
+}
+
+.jimgMenu ul {
+	list-style: none;
+	margin: 0px;
+	display: block;
+	height: 244px;
+	width: 1340px;
+	
+	}
+
+.jimgMenu ul li {
+	float: left;
+}
+
+.jimgMenu ul li a {
+	text-indent: -1000px;
+	background:#FFFFFF none repeat scroll 0%;
+	/*border-right: 2px solid #fff;*/
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	width:78px;
+	height: 244px;
+}
+
+.jimgMenu ul li.landscapes a {
+	background:url(../images/Expertise_3clm.jpg)  no-repeat scroll 0%;
+}
+
+.jimgMenu ul li.landscapes a:hover {
+	background: url(../images/Expertise_3clm_over.jpg)  no-repeat scroll 0%;
+}
+
+.jimgMenu ul li.people a {
+	background:url(../images/Expertise_3clm.jpg)  no-repeat scroll 0%;
+}
+.jimgMenu ul li.people a:hover {
+	background:url(../images/Expertise_3clm_over.jpg) no-repeat scroll 0%;
+}
+
+.jimgMenu ul li.nature a {
+	background:url(../images/Expertise_3clm.jpg)  no-repeat scroll 0%;
+}
+.jimgMenu ul li.nature a:hover {
+	background:url(../images/Expertise_3clm_over.jpg)  no-repeat scroll 0%;
+}
+.jimgMenu ul li.abstract a {
+	background: url(../images/Expertise_3clm.jpg)  no-repeat scroll 0%;
+}
+.jimgMenu ul li.abstract a:hover {
+	background:url(../images/Expertise_3clm_over.jpg) no-repeat scroll 0%;
+}
+
+.jimgMenu ul li.urban a {
+	background:url(../images/Expertise_3clm.jpg)  no-repeat scroll 0%;
+	min-width:620px;
+}
+.jimgMenu ul li.urban a:hover {
+	background:url(../images/Expertise_3clm_over.jpg)  no-repeat scroll 0%;
+	min-width:620px;
+}
+
+.clear {
+	clear: both;
+}

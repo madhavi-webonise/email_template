@@ -1,0 +1,626 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; margin:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(../../img/colorbox/overlay.png) repeat 0 0;}
+#colorbox{}
+#cboxTopLeft{width:10px; height:10px; background:url(../../img/colorbox/lightBoxCorners.png) no-repeat -20px 0;}
+#cboxTopRight{width:10px; height:10px; background:url(../../img/colorbox/lightBoxCorners.png) no-repeat -30px 0;}
+#cboxBottomLeft{width:10px; height:10px; background:url(../../img/colorbox/lightBoxCorners.png) no-repeat -20px -10px;}
+#cboxBottomRight{width:10px; height:10px; background:url(../../img/colorbox/lightBoxCorners.png) no-repeat -30px -10px;}
+#cboxMiddleLeft{width:10px; background:url(../../img/colorbox/lightBoxCorners.png) repeat-y; background-position:0 0;}
+#cboxMiddleRight{width:10px; background:url(../../img/colorbox/lightBoxCorners.png) right top repeat-y;}
+#cboxTopCenter{height:10px; background:url(../../img/colorbox/lightBoxBorder.png) left top repeat-x;}
+#cboxBottomCenter{height:10px; background:url(../../img/colorbox/lightBoxBorder.png) left bottom repeat-x;}
+#cboxContent{background:#fff; overflow:hidden;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494; text-indent: -5000px;}
+#cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+#cboxPrevious{position:absolute; bottom:0; left:0; background:url(../../img/colorbox/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious.hover{background-position:-75px -25px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(../../img/colorbox/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext.hover{background-position:-50px -25px;}
+#cboxLoadingOverlay{background:url(../../img/colorbox/loading_background.png) no-repeat center center;}
+#cboxLoadingGraphic{background:url(../../img/colorbox/loading.gif) no-repeat center center;}
+#cboxClose{position:absolute; top:15px;/*7px;*/ right:15px;/*7px;*/background:url(../../img/crossBtn.png); cursor:pointer;  width:10px; height:10px; background-position:0 0; text-indent:-9999px;}
+#cboxClose:hover{background-position:0 -10px;}
+
+/*
+  The following fixes a problem where IE7+ replaces a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+*/
+.cboxIE6 #cboxTopLeft{background:url(../../img/colorbox/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(../../img/colorbox/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(../../img/colorbox/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(../../img/colorbox/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(../../img/colorbox/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(../../img/colorbox/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(../../img/colorbox/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(../../img/colorbox/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+/*css from hemant*/
+/*comman*/
+.yourMessage {
+    display:block;
+    padding:20px 10px;
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #ffdddd;
+    background:#fff5f5;
+    margin-bottom:15px;
+    font-size:13px;
+    line-height:18px;
+    color:#000;
+    font-weight:normal;
+}
+.yourMessage .head {
+    margin-bottom:12px;
+}
+.heading {
+    font-size:22px;
+    font-weight:normal;
+    color:#000000;
+    line-height:30px;
+    height:30px;
+    margin:10px 0 7px 0;
+    font-family:'YanoneKaffeesatzRegular';
+}
+/*End comman*/
+#crushAider_example1 {
+    width:730px;
+    height:490px;
+    padding:0;
+    margin:0;
+}
+#crushAider_example1 .left {
+    width:390px;
+    float:left;
+    padding:0 20px;
+}
+#crushAider_example1 .right {
+    width:259px;
+    height:500px;
+    background-color:#fff5f5;
+    border-left:1px solid #ffdddd;
+    padding:0 20px;
+    float:right;
+}
+#crushAider_example1 .right .heading {
+    text-shadow:0 1px #ffcccc;
+}
+.colorBoxTextarea {
+    width:370px;
+    height:100px;
+    padding:15px 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#000;
+    line-height:18px;
+    font-weight:normal;
+    border:none;
+    background:url(../../img/textarea.png) left bottom no-repeat;
+}
+.sendAudioWrapper {
+    margin-bottom:10px;
+}
+.sendAudioWrapper input {
+    float:left;
+}
+.sendAudioWrapper span {
+    float:left;
+}
+.sendAudioWrapper span {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#000;
+    font-weight:normal;
+    line-height:18px;
+}
+input.radio {
+    float:left;
+    margin:10px 10px 0 0;
+}
+#crushAider_example1 .audioInput {
+    width:260px;
+    background:url(../../img/audioInput.png) top right no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#ff9999;
+    float:left;
+    font-weight:normal;
+    line-height:17px;
+    border:none;
+    padding:10px 20px 9px 40px;
+}
+#crushAider_example1 .audioBrowseInput {
+    width:197px;
+    float:left;
+    background:url(../../img/audioBrowse.png) top right no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#ff9999;
+    font-weight:normal;
+    line-height:17px;
+    border:none;
+    padding:10px 10px 9px 40px;
+}
+#crushAider_example1 .browseBtn {
+    width:73px;
+    height:35px;
+    float:left;
+    display:block;
+    background:url(../../img/browseBtn.png) top left no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:#FFF;
+    font-size:15px;
+    line-height:35px;
+    text-align:center;
+    border:none;
+    text-shadow:0 1px #770000;
+}
+#crushAider_example1 .right .crushMessage {
+    padding-bottom:10px;
+    border-bottom:1px solid #ffdddd;
+    margin-bottom:20px;
+}
+#crushAider_example1 .right .crushMessageWrapper {
+    overflow:auto;
+    height:350px;
+}
+.right .crushMessageWrapper .text {
+    font-size:13px;
+    color:#000;
+    line-height:18px;
+    text-shadow:0 1px #ffcccc;
+    padding-bottom:14px;
+}
+.right .crushMessageWrapper a.select {
+    width:60px;
+    height:25px;
+    display:block;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#FFF;
+    font-weight:bold;
+    text-shadow:0 1px #770000;
+    text-align:center;
+    line-height:25px;
+    float:right;
+    background:url(../../img/selectBtnBG.png) top left no-repeat;
+    font-size:14px;
+    cursor:pointer;
+}
+.colorBoxField {
+    background:url(../../img/colorBoxInput.png) no-repeat;
+    border:none;
+    width:243px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:16px;
+    color:#727272;
+    text-shadow:1px 0 #FFF;
+    padding:8px 10px;
+}
+select.colorBoxField {
+    background:url(../../img/colorBoxInput.png) no-repeat;
+    border:none;
+    width:263px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:16px;
+    color:#727272;
+    text-shadow:1px 0 #FFF;
+}
+span.intimation {
+    font-size:13px;
+    font-weight:normal;
+    line-height:20px;
+    color:#BB1111;
+    padding-left:22px;
+	float:left;
+	clear:both;
+}
+/*crushAider_example2*/
+#crushAider_example2 {
+    width:501px;
+    height:462px;
+    padding:20px;
+    margin:0;
+}
+#crushAider_example2 .heading {
+    margin:10px 0;
+}
+#crushAider_example2 ul.congratulationMessageWrapper {
+    margin-bottom:10px;
+}
+#crushAider_example2 ul.congratulationMessageWrapper li {
+    display:block;
+    padding:10px;
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #ffdddd;
+    background:#fff5f5;
+    margin-bottom:2px;
+}
+#crushAider_example2 .congratulationMessage {
+    float:left;
+    width:310px;
+    min-height:60px;
+    padding:0 58px 0 0;
+}
+#crushAider_example2 .crushIcon {
+    background:url(../../img/crushMatchIcon.png) right center no-repeat #fff5f5;
+}
+#crushAider_example2 .congratulationMessage .text, #crushAider_example2 .congratulationMessage .text a {
+    font-size:13px;
+    line-height:16px;
+    color:#ff3333;
+    font-weight:normal;
+    text-shadow:0 1px #FFF;
+}
+#crushAider_example2 .congratulationMessage .text a:hover {
+    color:#000;
+}
+#crushAider_example2 .congratulationMessage .text span {
+    font-size:15px;
+    font-weight:bold;
+    line-height:25px;
+    clear:both;
+}
+#crushAider_example2 .yourMessage {
+    display:block;
+    padding:20px 10px;
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #ffdddd;
+    background:#fff5f5;
+    margin-bottom:15px;
+    font-size:13px;
+    line-height:18px;
+    color:#000;
+    font-weight:normal;
+}
+#crushAider_example2 .sendAudioWrapper span {
+    width:auto; /*400px;*/
+    float:left;
+}
+/*End crushAider_example2*/
+/*crushAider_imageMessage/ video wrapper */
+#crushAider_imageMessage {
+    width:460px;
+    height:460px;
+    padding:20px;
+    margin:0;
+}
+#crushAider_videoMessage {
+    width:460px;
+    height:500px;
+    padding:20px;
+    margin:0;
+}
+#crushAider_sucessStory {
+    width:460px;
+    height:460px;
+    padding:20px;
+    margin:0;
+}
+.imageMessageWrapper {
+    width:325px;
+    min-height:160px;
+    padding-right:100px;
+    margin-bottom:15px;
+}
+.videoMessageWrapper {
+    width:325px;
+    min-height:205px;
+    padding-right:100px;
+    margin-bottom:15px;
+}
+.successStoryWrapper {
+    width:325px;
+    min-height:165px;
+    padding-right:100px;
+    margin-bottom:15px;
+}
+#crushAider_imageMessage .crushIcon, #crushAider_videoMessage .crushIcon {
+    background:url(../../img/video_imageIcon.png) right center no-repeat;
+}
+#crushAider_imageMessage .crushIcon, #crushAider_videoMessage .crushIcon {
+    background:url(../../img/video_imageIcon.png) right center no-repeat;
+}
+#crushAider_imageMessage .crushFailIcon, #crushAider_videoMessage .successIcon {
+    background:url(../../img/successStoryIcon.png) right center no-repeat;
+}
+.imageMessageWrapper .displayBox, .videoMessageWrapper .displayBox, .successStoryWrapper .displayBox {
+    width:260px;
+    float:left;
+    padding:5px;
+    margin-right:35px;
+    /*background:#ffdddd;*/
+    text-align:left;
+   /* border-radius:5px 5px 5px 5px;*/
+}
+.imageMessageWrapper .iconWrapper {
+    width:170px;
+    float:right;
+}
+.imageMessageWrapper .displayBox img {
+    max-width:260px;
+    text-align:center;
+}
+#crushAider_imageMessage ul.icons {
+    height:30px;
+    margin-bottom:15px;
+}
+#crushAider_imageMessage ul.icons li {
+    height:30px;
+    width:30px;
+    float:left;
+    margin-right:10px;
+}
+#crushAider_imageMessage ul.icons li#likeFBIcon {
+    height:30px;
+    width:auto;
+    float:left;
+    margin-right:0px;
+}
+#crushAider_imageMessage ul.icons li a {
+    display:block;
+    height:30px;
+    width:30px;
+    text-indent:-5000px;
+    background:url(../../img/bigIcons.png) left top no-repeat;
+    background-position:0 0;
+}
+#crushAider_imageMessage ul.icons li.facebook a {
+    background-position:-40px 0;
+}
+#crushAider_imageMessage ul.icons li.twitter a {
+    background-position:-80px 0;
+}
+/*End crushAider_imageMessage */
+/*who cares*/
+#who_cares_imageMessage {
+    width:360px;
+    height:195px;
+    padding:20px;
+    margin:0;
+}
+.whoCaresWrapper {
+    padding:25px 0;
+}
+/*.whoCaresWrapper .textWrapper {
+	position:absolute;
+}*/
+.whoCaresWrapper .text {
+    float:left;
+    width:150px;
+    font-size:22px;
+    line-height:24px;
+    color:#000;
+    display:inline-table;
+    vertical-align:text-top 50%;
+    position:relative;
+    font-family:'YanoneKaffeesatzRegular';
+}
+.whoCaresWrapper .textFull {
+    float:left;
+    padding-right:30px;
+    font-size:16px;
+    line-height:20px;
+    color:#000;
+    display:inline-table;
+    vertical-align:text-top 50%;
+    position:relative;
+	font-family:'YanoneKaffeesatzRegular';
+}
+.whoCaresWrapper .buttonBox {
+    float:right;
+    padding:5px;
+    background:#fff5f5;
+    border:1px solid #ffdddd;
+    border-radius:5px 5px 5px 5px;
+}
+.whoCaresWrapper .buttonBox a {
+	margin:0;
+}
+.whoCaresWrapper .buttonBox a.redBtn {
+    width:172px;
+    text-align:center;
+}
+/*27 may*/
+.normalText {
+    font-size:16px;
+	font-weight:normal;
+    line-height:20px;
+    color:#000;
+}
+.bottomLine {
+    border-bottom:1px solid #ffdddd;
+}
+/*End who cares*/
+/*changeEmailWrapper 30 May*/
+.changeEmailWrapper {
+}
+.changeEmailWrapper .text {
+    float:left;
+    width:175px;
+    padding-right:30px;
+    font-size:22px;
+    line-height:24px;
+    color:#000;
+    display:inline-table;
+    vertical-align:text-top 50%;
+    position:relative;
+    font-family:'YanoneKaffeesatzRegular';
+	margin-bottom:20px;
+}
+.changeEmailWrapper .emailAddress {
+	float:left;
+	font-size:14px;
+	line-height:18px;
+	color:#000;
+	font-weight:bold;
+}
+/*changeEmailWrapper End*/
+/*know_crush*/
+#crushAider_knowCrush {
+    width:460px;
+    height:293px;
+    padding:20px;
+    margin:0;
+}
+#crushAider_knowCrush ul.knowCrushWrapper {
+    margin-bottom:10px;
+}
+#crushAider_knowCrush ul.knowCrushWrapper li {
+    display:block;
+    padding:10px;
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #ffdddd;
+    background:#fff5f5;
+    margin-bottom:10px;
+}
+#crushAider_knowCrush .startCrushesIcon {
+    background:url(../../img/startCrushesIcon.png) right center no-repeat;
+}
+#crushAider_knowCrush .wellMatchIcon {
+    background:url(../../img/wellMatchIcon.png) right no-repeat;
+    background-position:0 0 50%;
+}
+ul.knowCrushWrapper li .avatarHolder {
+    width:40px;
+    height:40px;
+}
+ul.knowCrushWrapper li .text {
+    float:left;
+    font-size:22px;
+    width:378px;
+    height:50px;
+    line-height:50px;
+    color:#000;
+    font-family:'YanoneKaffeesatzRegular';
+}
+#crushAider_knowCrush ul.smallHeart, ul.knowCrushWrapper {
+    margin-bottom:5px;
+}
+#crushAider_knowCrush ul.smallHeart li {
+    display:block;
+    height:15px;
+    padding-left:25px;
+    font-size:13px;
+    line-height:15px;
+    color:#000;
+    margin-bottom:10px;
+    background:url(../../img/smallIcon.png) left center no-repeat;
+}
+
+/*End know_crush*/
+/*crush_sender*/
+#crushAider_crushSender {
+    width:460px;
+    height:395px;
+    padding:20px;
+}
+#crushAider_crushSender .senderMessageWrapper {
+    display:block;
+    padding:10px;
+    border-radius:5px 5px 5px 5px;
+    border:1px solid #ffdddd;
+    background:#fff5f5;
+    margin-bottom:10px;
+}
+#crushAider_crushSender .senderMessage {
+    float:left;
+    width:310px;
+    min-height:60px;
+    padding:0 58px 0 0;
+}
+#crushAider_crushSender .crushFailIcon {
+    background:url(../../img/crushFailIcon.png) right center no-repeat;
+}
+#crushAider_crushSender .crushIcon {
+    background:url(../../img/crushMatchIcon.png) right center no-repeat;
+}
+#crushAider_crushSender .senderMessage .text, #crushAider_crushSender .senderMessage .text a {
+    font-size:13px;
+    line-height:16px;
+    color:#ff3333;
+    font-weight:normal;
+    text-shadow:0 1px #FFF;
+}
+#crushAider_crushSender .senderMessage .text a:hover {
+    color:#000;
+}
+#crushAider_crushSender .senderMessage .text span {
+    font-size:15px;
+    font-weight:bold;
+    line-height:25px;
+    clear:both;
+}
+ul.fbTwit {
+    margin-bottom:15px;
+}
+ul.fbTwit li {
+    width:30px;
+    height:30px;
+    margin-right:10px;
+    float:left;
+    display:block;
+}
+ul.fbTwit li a {
+    display:block;
+    width:30px;
+    height:30px;
+    text-indent:-5000px;
+    background:url(../../img/fbTwitIcon.png) left top no-repeat;
+    background-position:0 0;
+}
+ul.fbTwit li.twitter a {
+    background:url(../../img/fbTwitIcon.png) left top no-repeat;
+    background-position:-40px 0;
+}
+
+.red {
+    color: #BB1111;
+}
+/*end crush_sender*/
+/*end Hemant css*/

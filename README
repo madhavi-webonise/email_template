@@ -9,10 +9,10 @@ This is a very simple dynamic email template management plugin for CakePHP
 
 Overall functionality is inspired by email content management in code or in cakephp view. This plugin is will help to change email content in admin
 
-The Plugin is an attempt to provide a basic, simple to use method to add new email templates as per requirement dy developer and change the email content by admin or super user for the appication as they want. while integrating nicely into CakePHP.
+The Plugin is an attempt to provide a basic, simple to use method to add new email templates as per requirement dy developer and change the email content by admin or super user for the application as they want. while integrating nicely into CakePHP.
 
 Why use this plugin?
-When I was working on my one project there is continues requirement to chaneg email content. for that every time I need to do change in code or in my email view. To make this process easy I wrote this plugin through which we can provide email content editing facility to admin using some constants which we can replace in code with there dynamic values.
+When I was working on my one project there is continues requirement to change email content. for that every time I need to do change in code or in my email view. To make this process easy I wrote this plugin through which we can provide email content editing facility to admin using some constants which we can replace in code with there dynamic values.
 
 While you can create email templates using this plugin and integrate it in code. and give facility to site admin to edit or view the email templates so they can edit content as per requirement.
 

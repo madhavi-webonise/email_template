@@ -1,6 +1,6 @@
 <?php
 
-class M4e1441c1be144db89eaa301c5e355906 extends CakeMigration {
+class CreateEmailTemplateTable extends CakeMigration {
 
     /**
      * Migration description
